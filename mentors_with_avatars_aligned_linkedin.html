@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mentors</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #ffffff;
+      color: #000f46;
+      margin: 0;
+      padding: 40px;
+    }
+    h2 {
+      text-align: center;
+      color: #000f46;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    .mentor-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .mentor-card {
+      background-color: #000f46;
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 30%;
+      min-width: 260px;
+      box-sizing: border-box;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    .mentor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .mentor-card img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      border: 3px solid #ec2994;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .mentor-card p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+    .book-button {
+      display: block;
+      margin: 40px auto 0;
+      background-color: #ec2994;
+      color: #ffffff;
+      padding: 12px 24px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      width: fit-content;
+      transition: background-color 0.3s ease;
+    }
+    .book-button:hover {
+      background-color: #bf1f75;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  
+    .linkedin-link {
+      margin-top: auto;
+      padding-top: 10px;
+    }
+    .mentor-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .mentor-card a {
+      color: #ec2994;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+</style>
+</head>
+<body>
+  <h2>Meet Your Mentors</h2>
+  <div class="mentor-grid">
+    
+    <div class="mentor-card" style="animation-delay: 0.1s;">
+      <img src="https://ui-avatars.com/api/?name=Aaron+Fraser&background=000f46&color=ffffff" alt="Aaron Fraser">
+      <strong>Aaron Fraser</strong><br>
+      <em>Academic Tutor and Program Coordinator – University of Melbourne and Wade Institute</em>
+      <p>Aaron is a Master of Entrepreneurship graduate from The University of Melbourne and a 2023 Melbourne Business School Dean’s Honours List recipient. He has co-founded multiple startups in the sustainability space, including Grapevine, a B2B sales platform for ethically made products, and Candella, a geo-locater app for finding responsible businesses around Melbourne. In 2024, he was named the JCI Australia Emerging Young Entrepreneur.</p>
+      <p><strong>Areas of Interest:</strong><br>Co-founding digital platforms in the sustainability space (B2B and B2C) as well as event and program organization/coordination</p>
+      <a href="https://www.linkedin.com/in/aafraser77/" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 0.2s;">
+      <img src="https://ui-avatars.com/api/?name=Manish+Pahwa&background=000f46&color=ffffff" alt="Manish Pahwa">
+      <strong>Manish Pahwa</strong><br>
+      <em>CTO – StackGo</em>
+      <p>Experienced tech leader and strategist with a background in B2B SaaS, integrations, and digital transformation. Passionate about solving complex problems with elegant, scalable solutions. Currently leading cross-functional teams and driving innovation in identity verification and workflow automation. Always exploring new technologies, mentoring talent, and turning vision into results.</p>
+      <p><strong>Areas of Interest:</strong><br>SaaS, B2B, Partnerships, Telco</p>
+      <a href="www.linkedin.com/in/pahwa-manish" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 0.30000000000000004s;">
+      <img src="https://ui-avatars.com/api/?name=Raphael+Maria+Mayer&background=000f46&color=ffffff" alt="Raphael Maria Mayer">
+      <strong>Raphael Maria Mayer</strong><br>
+      <em>CTO – Virtetic Pty Ltd</em>
+      <p>Background: BSc. (Electrical Engineering) TUV; MSc. (Biomedical Engineering) TUV; PhD (Prosthetics) UoM.  Raphael obtained his PhD in prosthetics from the Human-Robotics Laboratory at the University of Melbourne. During his PhD, he worked on non-invasive sensory feedback for upper limb prostheses. Before his PhD, he worked for 3 years in Research and Development at Ottobock Healthcare Products GmbH in Vienna - Austria. He is the co-founder and CTO of Virtetic.</p>
+      <p><strong>Areas of Interest:</strong><br>Project Management, People Management, Medical Device Regulations, Electronics and Embedded Software, Mechanical Development</p>
+      <a href="https://www.linkedin.com/in/raphaelmariamayer/" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 0.4s;">
+      <img src="https://ui-avatars.com/api/?name=Liam+Murray&background=000f46&color=ffffff" alt="Liam Murray">
+      <strong>Liam Murray</strong><br>
+      <em>Communication Coach / PhD Candidate – University of Melbourne</em>
+      <p>Hi, I'm Liam :)  Your stories and ideas deserve to be shared... and I'll teach you how to share them.   I'm a communications coach, med-tech co-founder, and PhD candidate who loves the entrepreneurial space. My background is biomedical engineering, with experience working for, and founding, start-ups in the neural and dental space. Currently I research cardiovascular disease.   Excited to see what the student's cook up in this program.</p>
+      <p><strong>Areas of Interest:</strong><br>Communication Skills, Med-Tech, Biomedical Engineering.</p>
+      <a href="https://www.linkedin.com/in/liam-andrew-murray/" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 0.5s;">
+      <img src="https://ui-avatars.com/api/?name=Dharmick+Mehta&background=000f46&color=ffffff" alt="Dharmick Mehta">
+      <strong>Dharmick Mehta</strong><br>
+      <em>Senior Data Analyst – Up</em>
+      <p>Hi, I'm Dharm. I love entrepreneurship and building things that make people's lives better. That led me to start a 3D printing (homewares) business that I ran for 5 years and successfully exited. During that span, I worked in data and strategy in the electricity, retail, and finance sector.</p>
+      <p><strong>Areas of Interest:</strong><br>Successfully started and exited a 3D printing business. Worked across in electricity, retail, and currently finance sector.</p>
+      <a href="https://www.linkedin.com/in/dharmm?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 0.6s;">
+      <img src="https://ui-avatars.com/api/?name=Oliver+Cucanic&background=000f46&color=ffffff" alt="Oliver Cucanic">
+      <strong>Oliver Cucanic</strong><br>
+      <em>Ex-founder and biotech researcher – Peter MacCallum Cancer Centre </em>
+      <p>Completed a PhD in cancer research while co-founding an Edtech startup that raised over $300K in pre-seed funding from San Francisco-based investors.</p>
+      <p><strong>Areas of Interest:</strong><br>B2B SaaS (Biotech, Healthtech and Edtech)</p>
+      <a href="www.linkedin.com/in/olivercucanic" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 0.7000000000000001s;">
+      <img src="https://ui-avatars.com/api/?name=Roshan+Ghadamian&background=000f46&color=ffffff" alt="Roshan Ghadamian">
+      <strong>Roshan Ghadamian</strong><br>
+      <em>Venture Creator – Unimelb</em>
+      <p>I’m a Venture Creator at the University of Melbourne Genesis Pre-Seed Fund, helping researchers, staff and alumni transform IP into investable startups. Over the last decade, I’ve launched my own startups, built new business lines inside established companies, and advised founders, educators, and investors on how to navigate uncertainty and unlock growth. I’ve worked across industries including education, consumer, web3, and government.</p>
+      <p><strong>Areas of Interest:</strong><br>Go To Market, Blockchain, Direct to Consumer, Creative Industries</p>
+      <a href="https://www.linkedin.com/in/rghadamian" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 0.8s;">
+      <img src="https://ui-avatars.com/api/?name=Junhong+Chen&background=000f46&color=ffffff" alt="Junhong Chen ">
+      <strong>Junhong Chen </strong><br>
+      <em>Co-founder  – Kinetics (MAP 23)</em>
+      <p>Hey! I’m Junhong, the technical co-founder of Kepler—a new kind of web browsing experience for teams and AI. I’ve spent the last few years designing and building software across web, mobile, and browser extensions, with a focus on making tech more useful and intuitive.  I love working with early-stage ideas, especially turning rough concepts into something real. Looking forward to chatting about product, tech, and all the messy (but fun) parts of turning an idea into reality.</p>
+      <p><strong>Areas of Interest:</strong><br>Tech</p>
+      <a href="https://www.linkedin.com/in/junhong-chen-1b199698" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 0.9s;">
+      <img src="https://ui-avatars.com/api/?name=Christian+Bien&background=000f46&color=ffffff" alt="Christian Bien">
+      <strong>Christian Bien</strong><br>
+      <em>Founder / Lecturer – AchieveAble</em>
+      <p>Christian is a child of Vietnamese boat refugees, seeing firsthand the potential education can have someone’s life inspired him to create AchieveAble to make that support more accessible to other Aussie kids. Prior to AchieveAble, he founded an educational charity in Perth delivering STEM programs to disadvantaged regional student. Christian is also currently a Lecturer in Entrepreneurial Organisation at the University of Melbourne and a former strategy consultant.</p>
+      <p><strong>Areas of Interest:</strong><br>Business Models (Chartered Accountant), Validation of Venture Ideas, Financial Modelling, No-Code App Development, Pitching and Pitch Deck Formation</p>
+      <a href="https://www.linkedin.com/in/christianbien/" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 1.0s;">
+      <img src="https://ui-avatars.com/api/?name=Nehal+Jain&background=000f46&color=ffffff" alt="Nehal Jain">
+      <strong>Nehal Jain</strong><br>
+      <em>Founder Success and Strategy / Investments – Birchal</em>
+      <p>Nehal Jain is a product strategist, sustainability advocate and former startup founder, with experience across tech, circular economy, and fundraising. She’s worked at Atlassian, co-founded a textiles recovery business, and now helps startups raise capital at Birchal. She’s passionate about purpose-led business, business model innovation, systems thinking, and supporting early-stage founders to find clarity and confidence.</p>
+      <p><strong>Areas of Interest:</strong><br>Startup funding and capital strategy (crowdfunding, grants, early-stage investment)  Product management and go-to-market strategy  Circular economy and sustainability-led business models  Social enterprise, fashion, and design-based ventures  Community building, partnerships, and ecosystem navigation  Experience across tech, NFP, early-stage startups, and accelerators</p>
+      <a href="https://www.linkedin.com/in/nehal-jain/" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 1.1s;">
+      <img src="https://ui-avatars.com/api/?name=Karthik+Viswanathan&background=000f46&color=ffffff" alt="Karthik Viswanathan">
+      <strong>Karthik Viswanathan</strong><br>
+      <em>CEO  – BibVault</em>
+      <p>Karthik is the Co-founder & CEO of BibVault, a cutting-edge Digital Health platform tackling the sedentary lifestyle crisis of Australia’s desk-bound and injury-prone workforce. BibVault is a B2B gamification software that enhances employee wellbeing by increasing engagement and awareness through innovative challenges and rewards.</p>
+      <p><strong>Areas of Interest:</strong><br>Digital health, Wearable device tracking, Product management, Partnerships, MVP development</p>
+      <a href="https://www.linkedin.com/in/karthikeyan-viswanathan-a1a62316/" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+    <div class="mentor-card" style="animation-delay: 1.2000000000000002s;">
+      <img src="https://ui-avatars.com/api/?name=Liz+Davis&background=000f46&color=ffffff" alt="Liz Davis">
+      <strong>Liz Davis</strong><br>
+      <em>Co-founder & CEO – ELLIS Medical Solutions</em>
+      <p>Liz is Co-founder & CEO of ELLIS Medical Solutions with 10+ years in leadership & human resources. She holds an MBA and is accredited in change management and psychometric assessments. She utilises her skills at ELLIS to lead startup growth, team cohesion, & commercialisation strategy. Having won pitch competitions including MedTech Actuator Origins and FEIT Endeavour Innovation Prize, she is passionate about mentoring emerging founders & helping students turn ideas into impactful ventures.</p>
+      <p><strong>Areas of Interest:</strong><br>Strategy, Commercialisation, MedTech, Human Resources, Leadership, Teaching & Learning, Presenting</p>
+      <a href="https://www.linkedin.com/in/ldavis-melbourne/" target="_blank" style="color:#ec2994; font-weight:bold; display:inline-block; margin-top:10px;">View LinkedIn Profile</a>
+    </div>
+    
+  </div>
+  <a class="book-button" href="#" target="_blank">Book in time with a mentor</a>
+</body>
+</html>
