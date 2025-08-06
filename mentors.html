@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mentor Directory</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 2rem;
+      color: #000f46;
+    }
+
+    h1 {
+      text-align: center;
+      color: #000f46;
+    }
+
+    .mentor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .mentor-card {
+      background-color: #000f46;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mentor-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #ec2994;
+    }
+
+    .mentor-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .mentor-bio {
+      font-size: 0.95rem;
+      color: #ffffff;
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .linkedin-link {
+      text-decoration: none;
+      color: #ec2994;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .linkedin-link img {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
+
+    .book-button {
+      display: inline-block;
+      margin: 3rem auto 1rem auto;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #ec2994;
+      color: #ffffff;
+      border: 2px solid #ec2994;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .book-button:hover {
+      background-color: #ffffff;
+      color: #ec2994;
+      cursor: pointer;
+    }
+
+    .button-container {
+      text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+      .mentor-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .mentor-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Meet Your Mentors</h1>
+
+  <div class="mentor-grid">
+    <!-- Include all 6 mentor cards here, same as before -->
+    <!-- (Omitted here to keep the snippet short; use full version with bios and LinkedIn links) -->
+  </div>
+
+  <div class="button-container">
+    <a class="book-button" href="https://calendly.com/" target="_blank">Book in time with a mentor</a>
+  </div>
+
+</body>
+</html>
