@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Mentors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
@@ -25,12 +25,14 @@
       animation: fadeIn 1s ease-in-out forwards;
       margin: 0 0 10px;
     }
+
+    /* Use Grid so cards in the same row share equal height */
     .mentor-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: 24px;
       margin-top: 20px;
+      align-items: stretch;
     }
   
     .mentor-card {
@@ -38,9 +40,6 @@
       color: var(--text);
       border-radius: 12px;
       padding: 20px;
-      width: 46%;          
-      min-width: 340px;    
-      max-width: 640px;
       box-sizing: border-box;
       text-align: left;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -55,6 +54,13 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     }
 
+    /* Body content that expands to push the button down */
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
 
     .mentor-header{
       display: flex;
@@ -104,19 +110,20 @@
     }
     .mentor-card a:hover { text-decoration: underline; }
     
-     .book-button {
-  display: block;
-  margin: 40px auto 0;
-  background-color: var(--accent);
-  color: #ffffff !important; /* ensure white text */
-  padding: 12px 24px;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
-  width: fit-content;
-  transition: background-color 0.3s ease;
-}
+    .book-button {
+      background-color: var(--accent);
+      color: #ffffff !important; /* ensure white text */
+      padding: 12px 24px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      width: fit-content;
+      transition: background-color 0.3s ease;
+
+      /* Keep button at the bottom */
+      margin-top: 0;
+      align-self: flex-start;
     }
     .book-button:hover { background-color: #bf1f75; }
 
@@ -125,10 +132,9 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-
     @media (max-width: 760px){
       body{ padding: 24px; }
-      .mentor-card{ width: 100%; min-width: 0; }
+      .mentor-grid{ grid-template-columns: 1fr; }
       .mentor-header{ flex-direction: column; align-items: flex-start; }
       .mentor-header img{ width: 120px; height: 120px; }
     }
@@ -136,204 +142,207 @@
 </head>
 <body>
   <h2>Meet Your Mentors</h2>
- <div>
-  <h4> Our mentors are here to share their knowledge, skills, and real-world insights to help you navigate through your entrepreneurial journey. They won’t hand you all the answers - instead, they’ll ask the right questions, challenge your thinking, and highlight opportunities you might not see yourself.</h4>
- </div>
+  <div>
+    <h4>Our mentors are here to share their knowledge, skills, and real-world insights to help you navigate through your entrepreneurial journey. They won’t hand you all the answers - instead, they’ll ask the right questions, challenge your thinking, and highlight opportunities you might not see yourself.</h4>
+  </div>
   <p>Browse the profiles below to see who could best support you. Once bookings open, you’ll be able to reserve one-on-one sessions directly.</p>
+
   <div class="mentor-grid">
     <div class="mentor-card" style="animation-delay: .1s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/aaron-fraser.jpg" alt="Aaron Fraser">
-        <div class="mentor-info">
-          <strong>Aaron Fraser</strong>
-          <em>Academic Tutor and Program Coordinator – University of Melbourne and Wade Institute</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/aaron-fraser.jpg" alt="Aaron Fraser">
+          <div class="mentor-info">
+            <strong>Aaron Fraser</strong>
+            <em>Academic Tutor and Program Coordinator – University of Melbourne and Wade Institute</em>
+          </div>
         </div>
+        <p>Aaron is a Master of Entrepreneurship graduate from The University of Melbourne and a 2023 Melbourne Business School Dean’s Honours List recipient. He has co-founded multiple startups in the sustainability space, including Grapevine, a B2B sales platform for ethically made products, and Candella, a geo-locater app for finding responsible businesses around Melbourne. In 2024, he was named the JCI Australia Emerging Young Entrepreneur.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>Co-founding digital platforms in the sustainability space (B2B and B2C) as well as event and program organization/coordination</p>
+        <a href="https://www.linkedin.com/in/aafraser77/" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Aaron is a Master of Entrepreneurship graduate from The University of Melbourne and a 2023 Melbourne Business School Dean’s Honours List recipient. He has co-founded multiple startups in the sustainability space, including Grapevine, a B2B sales platform for ethically made products, and Candella, a geo-locater app for finding responsible businesses around Melbourne. In 2024, he was named the JCI Australia Emerging Young Entrepreneur.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>Co-founding digital platforms in the sustainability space (B2B and B2C) as well as event and program organization/coordination</p>
-      <a href="https://www.linkedin.com/in/aafraser77/" target="_blank" rel="noopener">View LinkedIn Profile</a>
-       <a class="book-button" href="https://go.unimelb.edu.au/jh9p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/jh9p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: .2s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/manish-pahwa.jpg" alt="Manish Pahwa">
-        <div class="mentor-info">
-          <strong>Manish Pahwa</strong>
-          <em>CTO – StackGo</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/manish-pahwa.jpg" alt="Manish Pahwa">
+          <div class="mentor-info">
+            <strong>Manish Pahwa</strong>
+            <em>CTO – StackGo</em>
+          </div>
         </div>
+        <p>Experienced tech leader and strategist with a background in B2B SaaS, integrations, and digital transformation. Passionate about solving complex problems with elegant, scalable solutions. Currently leading cross-functional teams and driving innovation in identity verification and workflow automation. Always exploring new technologies, mentoring talent, and turning vision into results.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>SaaS, B2B, Partnerships, Telco</p>
+        <a href="https://www.linkedin.com/in/pahwa-manish" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Experienced tech leader and strategist with a background in B2B SaaS, integrations, and digital transformation. Passionate about solving complex problems with elegant, scalable solutions. Currently leading cross-functional teams and driving innovation in identity verification and workflow automation. Always exploring new technologies, mentoring talent, and turning vision into results.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>SaaS, B2B, Partnerships, Telco</p>
-      <a href="https://www.linkedin.com/in/pahwa-manish" target="_blank" rel="noopener">View LinkedIn Profile</a>
-        <a class="book-button" href="https://go.unimelb.edu.au/rh9p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/rh9p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: .3s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/raph-mayer.jpg" alt="Raphael Maria Mayer">
-        <div class="mentor-info">
-          <strong>Raphael Maria Mayer</strong>
-          <em>CTO – Virtetic Pty Ltd</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/raph-mayer.jpg" alt="Raphael Maria Mayer">
+          <div class="mentor-info">
+            <strong>Raphael Maria Mayer</strong>
+            <em>CTO – Virtetic Pty Ltd</em>
+          </div>
         </div>
+        <p>Background: BSc. (Electrical Engineering) TUV; MSc. (Biomedical Engineering) TUV; PhD (Prosthetics) UoM. Raphael obtained his PhD in prosthetics from the Human-Robotics Laboratory at the University of Melbourne. During his PhD, he worked on non-invasive sensory feedback for upper limb prostheses. Before his PhD, he worked for 3 years in Research and Development at Ottobock Healthcare Products GmbH in Vienna - Austria. He is the co-founder and CTO of Virtetic.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>Project Management, People Management, Medical Device Regulations, Electronics and Embedded Software, Mechanical Development</p>
+        <a href="https://www.linkedin.com/in/raphaelmariamayer/" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Background: BSc. (Electrical Engineering) TUV; MSc. (Biomedical Engineering) TUV; PhD (Prosthetics) UoM. Raphael obtained his PhD in prosthetics from the Human-Robotics Laboratory at the University of Melbourne. During his PhD, he worked on non-invasive sensory feedback for upper limb prostheses. Before his PhD, he worked for 3 years in Research and Development at Ottobock Healthcare Products GmbH in Vienna - Austria. He is the co-founder and CTO of Virtetic.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>Project Management, People Management, Medical Device Regulations, Electronics and Embedded Software, Mechanical Development</p>
-      <a href="https://www.linkedin.com/in/raphaelmariamayer/" target="_blank" rel="noopener">View LinkedIn Profile</a>
-       <a class="book-button" href="https://go.unimelb.edu.au/xh9p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/xh9p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: .4s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/liam-murray.jpg" alt="Liam Murray">
-        <div class="mentor-info">
-          <strong>Liam Murray</strong>
-          <em>Communication Coach / PhD Candidate – University of Melbourne</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/liam-murray.jpg" alt="Liam Murray">
+          <div class="mentor-info">
+            <strong>Liam Murray</strong>
+            <em>Communication Coach / PhD Candidate – University of Melbourne</em>
+          </div>
         </div>
+        <p>Hi, I'm Liam :) Your stories and ideas deserve to be shared... and I'll teach you how to share them. I'm a communications coach, med-tech co-founder, and PhD candidate who loves the entrepreneurial space. My background is biomedical engineering, with experience working for, and founding, start-ups in the neural and dental space. Currently I research cardiovascular disease. Excited to see what the students cook up in this program.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>Communication Skills, Med-Tech, Biomedical Engineering.</p>
+        <a href="https://www.linkedin.com/in/liam-andrew-murray/" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Hi, I'm Liam :) Your stories and ideas deserve to be shared... and I'll teach you how to share them. I'm a communications coach, med-tech co-founder, and PhD candidate who loves the entrepreneurial space. My background is biomedical engineering, with experience working for, and founding, start-ups in the neural and dental space. Currently I research cardiovascular disease. Excited to see what the students cook up in this program.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>Communication Skills, Med-Tech, Biomedical Engineering.</p>
-      <a href="https://www.linkedin.com/in/liam-andrew-murray/" target="_blank" rel="noopener">View LinkedIn Profile</a>
-        <a class="book-button" href="https://go.unimelb.edu.au/6h9p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/6h9p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: .5s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/dharmick-mehta.jpg" alt="Dharmick Mehta">
-        <div class="mentor-info">
-          <strong>Dharmick Mehta</strong>
-          <em>Senior Data Analyst – Up</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/dharmick-mehta.jpg" alt="Dharmick Mehta">
+          <div class="mentor-info">
+            <strong>Dharmick Mehta</strong>
+            <em>Senior Data Analyst – Up</em>
+          </div>
         </div>
+        <p>Hi, I'm Dharm. I love entrepreneurship and building things that make people's lives better. That led me to start a 3D printing (homewares) business that I ran for 5 years and successfully exited. During that span, I worked in data and strategy in the electricity, retail, and finance sector.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>Successfully started and exited a 3D printing business. Worked across in electricity, retail, and currently finance sector.</p>
+        <a href="https://www.linkedin.com/in/dharmm?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Hi, I'm Dharm. I love entrepreneurship and building things that make people's lives better. That led me to start a 3D printing (homewares) business that I ran for 5 years and successfully exited. During that span, I worked in data and strategy in the electricity, retail, and finance sector.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>Successfully started and exited a 3D printing business. Worked across in electricity, retail, and currently finance sector.</p>
-      <a href="https://www.linkedin.com/in/dharmm?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">View LinkedIn Profile</a>
-         <a class="book-button" href="https://go.unimelb.edu.au/ah9p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/ah9p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: .6s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/oliver-cucanic.jpg" alt="Oliver Cucanic">
-        <div class="mentor-info">
-          <strong>Oliver Cucanic</strong>
-          <em>Ex-founder and biotech researcher – Peter MacCallum Cancer Centre</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/oliver-cucanic.jpg" alt="Oliver Cucanic">
+          <div class="mentor-info">
+            <strong>Oliver Cucanic</strong>
+            <em>Ex-founder and biotech researcher – Peter MacCallum Cancer Centre</em>
+          </div>
         </div>
+        <p>Completed a PhD in cancer research while co-founding an Edtech startup that raised over $300K in pre-seed funding from San Francisco-based investors.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>B2B SaaS (Biotech, Healthtech and Edtech)</p>
+        <a href="https://www.linkedin.com/in/olivercucanic" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Completed a PhD in cancer research while co-founding an Edtech startup that raised over $300K in pre-seed funding from San Francisco-based investors.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>B2B SaaS (Biotech, Healthtech and Edtech)</p>
-      <a href="https://www.linkedin.com/in/olivercucanic" target="_blank" rel="noopener">View LinkedIn Profile</a>
-        <a class="book-button" href="https://go.unimelb.edu.au/nh9p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/nh9p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: .7s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/roshan-g.jpg" alt="Roshan Ghadamian">
-        <div class="mentor-info">
-          <strong>Roshan Ghadamian</strong>
-          <em>Venture Creator – Unimelb</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/roshan-g.jpg" alt="Roshan Ghadamian">
+          <div class="mentor-info">
+            <strong>Roshan Ghadamian</strong>
+            <em>Venture Creator – Unimelb</em>
+          </div>
         </div>
+        <p>I’m a Venture Creator at the University of Melbourne Genesis Pre-Seed Fund, helping researchers, staff and alumni transform IP into investable startups. Over the last decade, I’ve launched my own startups, built new business lines inside established companies, and advised founders, educators, and investors on how to navigate uncertainty and unlock growth. I’ve worked across industries including education, consumer, web3, and government.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>Go To Market, Blockchain, Direct to Consumer, Creative Industries</p>
+        <a href="https://www.linkedin.com/in/rghadamian" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>I’m a Venture Creator at the University of Melbourne Genesis Pre-Seed Fund, helping researchers, staff and alumni transform IP into investable startups. Over the last decade, I’ve launched my own startups, built new business lines inside established companies, and advised founders, educators, and investors on how to navigate uncertainty and unlock growth. I’ve worked across industries including education, consumer, web3, and government.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>Go To Market, Blockchain, Direct to Consumer, Creative Industries</p>
-      <a href="https://www.linkedin.com/in/rghadamian" target="_blank" rel="noopener">View LinkedIn Profile</a>
-        <a class="book-button" href="https://go.unimelb.edu.au/z29p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/z29p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: .8s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/junhing-chen.jpg" alt="Junhong Chen">
-        <div class="mentor-info">
-          <strong>Junhong Chen</strong>
-          <em>Co-founder – Kinetics (MAP 23)</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/junhing-chen.jpg" alt="Junhong Chen">
+          <div class="mentor-info">
+            <strong>Junhong Chen</strong>
+            <em>Co-founder – Kinetics (MAP 23)</em>
+          </div>
         </div>
+        <p>Hey! I’m Junhong, the technical co-founder of Kepler—a new kind of web browsing experience for teams and AI. I’ve spent the last few years designing and building software across web, mobile, and browser extensions, with a focus on making tech more useful and intuitive. I love working with early-stage ideas, especially turning rough concepts into something real. Looking forward to chatting about product, tech, and all the messy (but fun) parts of turning an idea into reality.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>Tech</p>
+        <a href="https://www.linkedin.com/in/junhong-chen-1b199698" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Hey! I’m Junhong, the technical co-founder of Kepler—a new kind of web browsing experience for teams and AI. I’ve spent the last few years designing and building software across web, mobile, and browser extensions, with a focus on making tech more useful and intuitive. I love working with early-stage ideas, especially turning rough concepts into something real. Looking forward to chatting about product, tech, and all the messy (but fun) parts of turning an idea into reality.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>Tech</p>
-      <a href="https://www.linkedin.com/in/junhong-chen-1b199698" target="_blank" rel="noopener">View LinkedIn Profile</a>
-       <a class="book-button" href="https://go.unimelb.edu.au/q29p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/q29p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: .9s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/christian-bien.jpg" alt="Christian Bien">
-        <div class="mentor-info">
-          <strong>Christian Bien</strong>
-          <em>Founder / Lecturer – AchieveAble</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/christian-bien.jpg" alt="Christian Bien">
+          <div class="mentor-info">
+            <strong>Christian Bien</strong>
+            <em>Founder / Lecturer – AchieveAble</em>
+          </div>
         </div>
+        <p>Christian is a child of Vietnamese boat refugees, seeing firsthand the potential education can have someone’s life inspired him to create AchieveAble to make that support more accessible to other Aussie kids. Prior to AchieveAble, he founded an educational charity in Perth delivering STEM programs to disadvantaged regional students. Christian is also currently a Lecturer in Entrepreneurial Organisation at the University of Melbourne and a former strategy consultant.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>Business Models (Chartered Accountant), Validation of Venture Ideas, Financial Modelling, No-Code App Development, Pitching and Pitch Deck Formation</p>
+        <a href="https://www.linkedin.com/in/christianbien/" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Christian is a child of Vietnamese boat refugees, seeing firsthand the potential education can have someone’s life inspired him to create AchieveAble to make that support more accessible to other Aussie kids. Prior to AchieveAble, he founded an educational charity in Perth delivering STEM programs to disadvantaged regional students. Christian is also currently a Lecturer in Entrepreneurial Organisation at the University of Melbourne and a former strategy consultant.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>Business Models (Chartered Accountant), Validation of Venture Ideas, Financial Modelling, No-Code App Development, Pitching and Pitch Deck Formation</p>
-      <a href="https://www.linkedin.com/in/christianbien/" target="_blank" rel="noopener">View LinkedIn Profile</a>
-       <a class="book-button" href="https://go.unimelb.edu.au/329p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/329p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: 1.0s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/nehal-j.jpg" alt="Nehal Jain">
-        <div class="mentor-info">
-          <strong>Nehal Jain</strong>
-          <em>Founder Success and Strategy / Investments – Birchal</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/nehal-j.jpg" alt="Nehal Jain">
+          <div class="mentor-info">
+            <strong>Nehal Jain</strong>
+            <em>Founder Success and Strategy / Investments – Birchal</em>
+          </div>
         </div>
+        <p>Nehal Jain is a product strategist, sustainability advocate and former startup founder, with experience across tech, circular economy, and fundraising. She’s worked at Atlassian, co-founded a textiles recovery business, and now helps startups raise capital at Birchal. She’s passionate about purpose-led business, business model innovation, systems thinking, and supporting early-stage founders to find clarity and confidence.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>Startup funding and capital strategy (crowdfunding, grants, early-stage investment) Product management and go-to-market strategy Circular economy and sustainability-led business models Social enterprise, fashion, and design-based ventures Community building, partnerships, and ecosystem navigation Experience across tech, NFP, early-stage startups, and accelerators</p>
+        <a href="https://www.linkedin.com/in/nehal-jain/" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Nehal Jain is a product strategist, sustainability advocate and former startup founder, with experience across tech, circular economy, and fundraising. She’s worked at Atlassian, co-founded a textiles recovery business, and now helps startups raise capital at Birchal. She’s passionate about purpose-led business, business model innovation, systems thinking, and supporting early-stage founders to find clarity and confidence.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>Startup funding and capital strategy (crowdfunding, grants, early-stage investment) Product management and go-to-market strategy Circular economy and sustainability-led business models Social enterprise, fashion, and design-based ventures Community building, partnerships, and ecosystem navigation Experience across tech, NFP, early-stage startups, and accelerators</p>
-      <a href="https://www.linkedin.com/in/nehal-jain/" target="_blank" rel="noopener">View LinkedIn Profile</a>
-        <a class="book-button" href="https://go.unimelb.edu.au/k29p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/k29p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: 1.1s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/k-v.jpg" alt="Karthik Viswanathan">
-        <div class="mentor-info">
-          <strong>Karthik Viswanathan</strong>
-          <em>CEO – BibVault</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/k-v.jpg" alt="Karthik Viswanathan">
+          <div class="mentor-info">
+            <strong>Karthik Viswanathan</strong>
+            <em>CEO – BibVault</em>
+          </div>
         </div>
+        <p>Karthik is the Co-founder &amp; CEO of BibVault, a cutting-edge Digital Health platform tackling the sedentary lifestyle crisis of Australia’s desk-bound and injury-prone workforce. BibVault is a B2B gamification software that enhances employee wellbeing by increasing engagement and awareness through innovative challenges and rewards.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>Digital health, Wearable device tracking, Product management, Partnerships, MVP development</p>
+        <a href="https://www.linkedin.com/in/karthikeyan-viswanathan-a1a62316/" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Karthik is the Co-founder &amp; CEO of BibVault, a cutting-edge Digital Health platform tackling the sedentary lifestyle crisis of Australia’s desk-bound and injury-prone workforce. BibVault is a B2B gamification software that enhances employee wellbeing by increasing engagement and awareness through innovative challenges and rewards.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>Digital health, Wearable device tracking, Product management, Partnerships, MVP development</p>
-      <a href="https://www.linkedin.com/in/karthikeyan-viswanathan-a1a62316/" target="_blank" rel="noopener">View LinkedIn Profile</a>
-       <a class="book-button" href="https://go.unimelb.edu.au/929p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/929p" target="_blank" rel="noopener">Book a Session</a>
     </div>
 
     <div class="mentor-card" style="animation-delay: 1.2s;">
-      <div class="mentor-header">
-        <img src="https://bwsimms.github.io/SSC25/images/liz-d.jpg" alt="Liz Davis">
-        <div class="mentor-info">
-          <strong>Liz Davis</strong>
-          <em>Co-founder &amp; CEO – ELLIS Medical Solutions</em>
+      <div class="card-body">
+        <div class="mentor-header">
+          <img src="https://bwsimms.github.io/SSC25/images/liz-d.jpg" alt="Liz Davis">
+          <div class="mentor-info">
+            <strong>Liz Davis</strong>
+            <em>Co-founder &amp; CEO – ELLIS Medical Solutions</em>
+          </div>
         </div>
+        <p>Liz is Co-founder &amp; CEO of ELLIS Medical Solutions with 10+ years in leadership &amp; human resources. She holds an MBA and is accredited in change management and psychometric assessments. She utilises her skills at ELLIS to lead startup growth, team cohesion, &amp; commercialisation strategy. Having won pitch competitions including MedTech Actuator Origins and FEIT Endeavour Innovation Prize, she is passionate about mentoring emerging founders &amp; helping students turn ideas into impactful ventures.</p>
+        <p class="areas"><strong>Areas of Interest:</strong><br>Strategy, Commercialisation, MedTech, Human Resources, Leadership, Teaching &amp; Learning, Presenting</p>
+        <a href="https://www.linkedin.com/in/ldavis-melbourne/" target="_blank" rel="noopener">View LinkedIn Profile</a>
       </div>
-      <p>Liz is Co-founder &amp; CEO of ELLIS Medical Solutions with 10+ years in leadership &amp; human resources. She holds an MBA and is accredited in change management and psychometric assessments. She utilises her skills at ELLIS to lead startup growth, team cohesion, &amp; commercialisation strategy. Having won pitch competitions including MedTech Actuator Origins and FEIT Endeavour Innovation Prize, she is passionate about mentoring emerging founders &amp; helping students turn ideas into impactful ventures.</p>
-      <p class="areas"><strong>Areas of Interest:</strong><br>Strategy, Commercialisation, MedTech, Human Resources, Leadership, Teaching &amp; Learning, Presenting</p>
-      <a href="https://www.linkedin.com/in/ldavis-melbourne/" target="_blank" rel="noopener">View LinkedIn Profile</a>
-       <a class="book-button" href="https://go.unimelb.edu.au/g29p" target="_blank" rel="noopener">
-    Book a Session
-  </a>
+      <a class="book-button" href="https://go.unimelb.edu.au/g29p" target="_blank" rel="noopener">Book a Session</a>
     </div>
   </div>
-<!-- Write your comments here
-  <a class="book-button" href="#" target="_blank" rel="noopener">Book in time with a mentor</a> -->
+
+  <!--
+  <a class="book-button" href="#" target="_blank" rel="noopener">Book in time with a mentor</a>
+  -->
 </body>
 </html>
